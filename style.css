@@ -329,7 +329,7 @@ h6 {
 }
 
 /* Product */
-.image {
+.image-first-row {
   height: 170px;
   width: auto;
   margin-top: 0px;
@@ -337,7 +337,7 @@ h6 {
   border-radius: 15px;
 }
 
-.image1 {
+.image-after-first-row {
   height: 200px;
   width: auto;
   margin-top: 20px;
@@ -345,15 +345,15 @@ h6 {
   border-radius: 15px;
 }
 
-.image:not(:last-child) {
+.image-first-row:not(:last-child) {
   margin-right: 40px;
 }
 
-.image1:not(:last-child) {
+.image-after-first-row:not(:last-child) {
   margin-right: 40px;
 }
 
-.image1:hover {
+.image-after-first-row:hover {
   z-index: 1000;
 }
 
@@ -397,7 +397,7 @@ h4 {
   font-weight: bold;
 }
 
-.button2 {
+.button-page {
   background-color: rgb(236, 138, 68);
   border: 2px solid white;
   font-family: Lati;
@@ -410,7 +410,7 @@ h4 {
   width: 50px;
 }
 
-.button {
+.button-form {
   background-color: rgb(236, 138, 68);
   text-decoration: none;
   margin-left: 280px;
@@ -420,7 +420,7 @@ h4 {
   height: 40px;
   width: 65px;
 }
-.button:hover {
+.button-form:hover {
   background-color: white;
   color: rgb(236, 138, 68);
   border: 1px solid rgb(236, 138, 68);

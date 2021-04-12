@@ -8,7 +8,7 @@ document.querySelector(".close").addEventListener("click", function () {
 
 let data = [];
 const addProduct = (ev) => {
-  ev.preventDefault(); //to stop the form submitting
+  ev.preventDefault();
   let product = {
     id: Date.now(),
     photo: document.getElementById("photo").value,
@@ -39,7 +39,12 @@ function addProductToTable() {
   for (let i = 0; i < data.length; i++) {
     row.innerHTML += `
     <td>
-    <img class="image1" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="${data[i].photo}" alt="${data[i].name}" title="${data[i].name}">
+    <img class="image-after-first-row" 
+      onmouseover="applyBigImageStyling(this)" 
+      onmouseout="applyNormalImageStyling(this)" 
+      src="${data[i].photo}" 
+      alt="${data[i].name}" 
+      title="${data[i].name}">
     <h5>${data[i].name}</h5>
          <br>
          <h5 class="category">${data[i].category}</h5>
