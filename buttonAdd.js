@@ -17,7 +17,6 @@ const addProduct = (ev) => {
     price: document.getElementById("price").value,
   };
   data.push(product);
-  // document.forms[0].reset(); // to clear the form for the next entries
   document.querySelector("form").reset();
 
   saveToLocalStorage();
@@ -27,12 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnAdd").addEventListener("click", addProduct);
 });
 
-//saving to localStorage
 function saveToLocalStorage() {
   localStorage.setItem("MyProductList", JSON.stringify(data));
 }
 
-//add a new product
 function addProductToTable() {
   let tabel = document.querySelector("table");
   let row = tabel.insertRow();

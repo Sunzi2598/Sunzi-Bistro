@@ -111,10 +111,10 @@ h3 {
 }
 
 ul li:not(:last-child)::after {
-  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  content: "\2022";
   color: chocolate;
   font-weight: bold;
-  display: inline-block; /* Needed to add space between the bullet and the text */
+  display: inline-block;
   margin-left: 20px;
 }
 
@@ -137,7 +137,6 @@ p {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* Links inside the navbar */
 .features-bar a {
   float: left;
   font-size: 16px;
@@ -147,7 +146,6 @@ p {
   text-decoration: none;
 }
 
-/* The dropdown container */
 .dropdown1 {
   padding-left: 170px;
 }
@@ -159,7 +157,6 @@ p {
   padding-left: 10px;
 }
 
-/* Dropdown button */
 .dropdown1 .dropbtn1 {
   font-size: 16px;
   border: none;
@@ -168,8 +165,8 @@ p {
   font-weight: bold;
   padding: 14px 14px 20px 20px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
 .dropdown2 .dropbtn2,
@@ -181,11 +178,10 @@ p {
   font-weight: bold;
   padding: 14px 20px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Add a background color to navbar links on hover */
 .features-bar a:hover,
 .dropdown1:hover .dropbtn1,
 .dropdown2:hover .dropbtn2,
@@ -193,7 +189,6 @@ p {
   background-color: chocolate;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-categories,
 .dropdown-sorting,
 .dropdown-vegetarian {
@@ -205,7 +200,6 @@ p {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-categories a,
 .dropdown-sorting a,
 .dropdown-vegetarian a {
@@ -217,14 +211,12 @@ p {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-categories a:hover,
 .dropdown-sorting a:hover,
 .dropdown-vegetarian a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown1:hover .dropdown-categories,
 .dropdown2:hover .dropdown-sorting,
 .dropdown3:hover .dropdown-vegetarian {
@@ -247,7 +239,6 @@ p {
   display: none;
 }
 
-/* Slider */
 span.value {
   height: 1.5em;
   font-weight: bold;
@@ -288,7 +279,6 @@ span.value.upper::before {
   position: absolute;
 }
 
-/* webkit specific styling */
 .min-max-slider > input {
   -webkit-appearance: none;
   outline: none !important;
@@ -305,12 +295,12 @@ span.value.upper::before {
 }
 
 .min-max-slider > input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  width: 14px; /* Set a specific slider handle width */
-  height: 14px; /* Slider handle height */
-  background: #eee; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  width: 14px;
+  height: 14px;
+  background: #eee;
+  cursor: pointer;
   border: 1px solid rgb(236, 138, 68);
   border-radius: 100%;
 }
@@ -328,7 +318,6 @@ h6 {
   font-weight: bold;
 }
 
-/* Product */
 .image-first-row {
   height: 170px;
   width: auto;
@@ -426,7 +415,6 @@ h4 {
   border: 1px solid rgb(236, 138, 68);
 }
 
-/* Form */
 .bg-modal {
   background-color: rgb(236, 138, 68);
   width: 100%;
