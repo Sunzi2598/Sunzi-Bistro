@@ -20,32 +20,20 @@ const addProduct = (ev) => {
   // document.forms[0].reset(); // to clear the form for the next entries
   document.querySelector("form").reset();
 
-  //for display purposes only
-  console.warn("added", { data });
-
-  //saving to localStorage
-  localStorage.setItem("MyProductList", JSON.stringify(data));
-  addToTable();
+  saveToLocalStorage();
+  addProductToTable();
 };
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnAdd").addEventListener("click", addProduct);
 });
 
-// function addToTable() {
-//   let tabel = document.querySelector("table");
-//   for (let i = 0; i < data.length; i++) {
-//     let r1 = tabel.insertRow();
-//     let r2 = tabel.insertRow();
-//     let r3 = tabel.insertRow();
-//     let r4 = tabel.insertRow();
-//     r1.innerHTML = data[i].photo;
-//     r2.innerHTML = data[i].name;
-//     r3.innerHTML = data[i].category;
-//     r4.innerHTML = data[i].price;
-//   }
-// }
+//saving to localStorage
+function saveToLocalStorage() {
+  localStorage.setItem("MyProductList", JSON.stringify(data));
+}
 
-function addToTable() {
+//add a new product
+function addProductToTable() {
   let tabel = document.querySelector("table");
   let row = tabel.insertRow();
   for (let i = 0; i < data.length; i++) {

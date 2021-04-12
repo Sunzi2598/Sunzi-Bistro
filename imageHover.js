@@ -1,9 +1,9 @@
-function bigImg(x) {
-  x.style.height = "250px";
-  x.style.width = "auto";
+function applyBigImageStyling(image) {
+  image.style.height = "250px";
+  image.style.width = "auto";
 }
 
-function normalImg(x) {
-  x.style.height = "170px";
-  x.style.width = "auto";
+function applyNormalImageStyling(image) {
+  image.style.height = "170px";
+  image.style.width = "auto";
 }
