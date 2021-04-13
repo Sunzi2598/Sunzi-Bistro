@@ -55,7 +55,7 @@ header {
   background-attachment: fixed;
 }
 
-.hero-text-box {
+.description-text-box {
   position: absolute;
   width: 1140px;
   top: 30%;
@@ -146,18 +146,18 @@ p {
   text-decoration: none;
 }
 
-.dropdown1 {
+.dropdown-for-category {
   padding-left: 170px;
 }
 
-.dropdown2,
-.dropdown3 {
+.dropdown-for-sorting,
+.dropdown-for-vegetarian {
   float: left;
   overflow: hidden;
   padding-left: 10px;
 }
 
-.dropdown1 .dropbtn1 {
+.dropdown-for-category .dropbtn-category {
   font-size: 16px;
   border: none;
   outline: none;
@@ -169,8 +169,8 @@ p {
   margin: 0;
 }
 
-.dropdown2 .dropbtn2,
-.dropdown3 .dropbtn3 {
+.dropdown-for-sorting .dropbtn-sorting,
+.dropdown-for-vegetarian .dropbtn-vegetarian {
   font-size: 16px;
   border: none;
   outline: none;
@@ -183,9 +183,9 @@ p {
 }
 
 .features-bar a:hover,
-.dropdown1:hover .dropbtn1,
-.dropdown2:hover .dropbtn2,
-.dropdown3:hover .dropbtn3 {
+.dropdown-for-category:hover .dropbtn-category,
+.dropdown-for-sorting:hover .dropbtn-sorting,
+.dropdown-for-vegetarian:hover .dropbtn-vegetarian {
   background-color: chocolate;
 }
 
@@ -217,9 +217,9 @@ p {
   background-color: #ddd;
 }
 
-.dropdown1:hover .dropdown-categories,
-.dropdown2:hover .dropdown-sorting,
-.dropdown3:hover .dropdown-vegetarian {
+.dropdown-for-category:hover .dropdown-categories,
+.dropdown-for-sorting:hover .dropdown-sorting,
+.dropdown-for-vegetarian:hover .dropdown-vegetarian {
   display: block;
 }
 .fa {
@@ -424,7 +424,7 @@ h4 {
   display: none;
 }
 
-.logo2 {
+.logo-image {
   height: 60px;
   width: auto;
   float: left;
