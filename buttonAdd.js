@@ -9,6 +9,7 @@ document.querySelector(".close").addEventListener("click", function () {
 let data = [];
 const addProduct = (ev) => {
   ev.preventDefault();
+
   let product = {
     id: Date.now(),
     photo: document.getElementById("photo").value,
@@ -16,6 +17,7 @@ const addProduct = (ev) => {
     category: document.getElementById("category").value,
     price: document.getElementById("price").value,
   };
+
   data.push(product);
   document.querySelector("form").reset();
 
