@@ -24,6 +24,7 @@ const addProduct = (ev) => {
   saveToLocalStorage();
   addProductToTable();
 };
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnAdd").addEventListener("click", addProduct);
 });
@@ -35,21 +36,21 @@ function saveToLocalStorage() {
 function addProductToTable() {
   let tabel = document.querySelector("table");
   let row = tabel.insertRow();
-  for (let i = 0; i < data.length; i++) {
+  data.forEach((product) => {
     row.innerHTML += `
     <td>
     <img class="image-after-first-row" 
       onmouseover="applyBigImageStyling(this)" 
       onmouseout="applyNormalImageStyling(this)" 
-      src="${data[i].photo}" 
-      alt="${data[i].name}" 
-      title="${data[i].name}">
-    <h5>${data[i].name}</h5>
+      src="${product.photo}" 
+      alt="${product.name}" 
+      tproducttle="${product.name}">
+    <h5>${product.name}</h5>
          <br>
-         <h5 class="category">${data[i].category}</h5>
+         <h5 class="category">${product.category}</h5>
          <br>
-     <h4>${data[i].price}</h4>
+     <h4>${product.price}</h4>
    </td>
   `;
-  }
+  });
 }

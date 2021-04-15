@@ -1,7 +1,6 @@
 let thumbsize = 14;
 
 function draw(slider, splitvalue) {
-  /* set function vars */
   let min = slider.querySelector(".min");
   let max = slider.querySelector(".max");
   let lower = slider.querySelector(".lower");
@@ -12,11 +11,9 @@ function draw(slider, splitvalue) {
   let rangemin = parseInt(slider.getAttribute("data-rangemin"));
   let rangemax = parseInt(slider.getAttribute("data-rangemax"));
 
-  /* set min and max attributes */
   min.setAttribute("max", splitvalue);
   max.setAttribute("min", splitvalue);
 
-  /* set css */
   min.style.width =
     parseInt(
       thumbsize +
@@ -37,10 +34,8 @@ function draw(slider, splitvalue) {
   slider.style.height =
     lower.offsetHeight + min.offsetHeight + legend.offsetHeight + "px";
 
-  /* correct for 1 off at the end */
   if (max.value > rangemax - 1) max.setAttribute("data-value", rangemax);
 
-  /* write value and labels */
   max.value = max.getAttribute("data-value");
   min.value = min.getAttribute("data-value");
   lower.innerHTML = min.getAttribute("data-value");
@@ -48,7 +43,6 @@ function draw(slider, splitvalue) {
 }
 
 function init(slider) {
-  /* set function vars */
   let min = slider.querySelector(".min");
   let max = slider.querySelector(".max");
   let rangemin = parseInt(min.getAttribute("min"));
@@ -56,17 +50,14 @@ function init(slider) {
   let avgvalue = (rangemin + rangemax) / 2;
   let legendnum = slider.getAttribute("data-legendnum");
 
-  /* set data-values */
   min.setAttribute("data-value", rangemin);
   max.setAttribute("data-value", rangemax);
 
-  /* set data vars */
   slider.setAttribute("data-rangemin", rangemin);
   slider.setAttribute("data-rangemax", rangemax);
   slider.setAttribute("data-thumbsize", thumbsize);
   slider.setAttribute("data-rangewidth", slider.offsetWidth);
 
-  /* write labels */
   let lower = document.createElement("span");
   let upper = document.createElement("span");
   lower.classList.add("lower", "value");
@@ -76,7 +67,6 @@ function init(slider) {
   slider.insertBefore(lower, min.previousElementSibling);
   slider.insertBefore(upper, min.previousElementSibling);
 
-  /* write legend */
   let legend = document.createElement("div");
   legend.classList.add("legend");
   let legendvalues = [];
@@ -90,10 +80,8 @@ function init(slider) {
   }
   slider.appendChild(legend);
 
-  /* draw */
   draw(slider, avgvalue);
 
-  /* events */
   min.addEventListener("input", function () {
     update(min);
   });
@@ -103,20 +91,17 @@ function init(slider) {
 }
 
 function update(el) {
-  /* set function vars */
   let slider = el.parentElement;
   let min = slider.querySelector("#min");
   let max = slider.querySelector("#max");
   let minvalue = Math.floor(min.value);
   let maxvalue = Math.floor(max.value);
 
-  /* set inactive values before draw */
   min.setAttribute("data-value", minvalue);
   max.setAttribute("data-value", maxvalue);
 
   let avgvalue = (minvalue + maxvalue) / 2;
 
-  /* draw */
   draw(slider, avgvalue);
 }
 
