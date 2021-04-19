@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale = 1, minimum-scale = 1"
+    />
+    <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
+          crossorigin="anonymous" 
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Sunzi Bistro</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <div class="nav" >
+                <img src="img/logo.jpg" alt="Sunzi Bistro logo" class="logo">
+                <h3> &nbsp; Sunzi <br> &nbsp; Bistro </h3>
+                <ul class="main-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+      <div class="description-text-box">
+        <h1>Ordering Food</h1>
+        <br>
+        <h2>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &nbsp; 
+          <i class="fas fa-utensils" > &nbsp;   </i> 
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</h2>
+        <p> Sunzi Bistro is a well-established restaurant that has been in business for over 10 years. 
+          You can easily find this restaurant at the Remedios Circle in Malate because of its wooden 
+          door and green roof. </p>
+    </header>
+
+    <div class="features-bar" >
+            <div class="dropdown-for-category">
+                <button class="dropbtn-category">Categories
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-categories">
+                  <a href="#">Hamburger</a>
+                  <a href="#">Noodles</a>
+                  <a href="#">Pasta</a>
+                  <a href="#">Pizza</a>
+                  <a href="#">Sweets</a>
+                </div>
+            </div>
+
+                <div class="dropdown-for-sorting">
+                    <button class="dropbtn-sorting">Sorting
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-sorting">
+                      <a href="#">Sort</a>
+                    </div>
+                </div>
+                
+                    <div class="dropdown-for-vegetarian">
+                        <button class="dropbtn-vegetarian">Vegetarian
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-vegetarian">
+                          <a href="#">Noodlles</a>
+                        </div>
+                </div>
+
+        <div class="min-max-slider" data-legendnum="2">
+            <label for="min">Minimum price</label>
+            <input id="min" class="min" name="min" type="range" step="1" min="0" max="150"/>
+            <label for="max">Maximum price</label>
+            <input id="max" class="max" name="max" type="range" step="1" min="0" max="150"/>
+            <h6>Price</h6>
+        </div>
+      </div>
+      <br>
+
+      <section class="hero">
+        <div class="hero-content">
+          <a href="#" id="button" class="button-page">&nbsp;+&nbsp;</a>
+        </div>
+      </section>
+      <div class="bg-modal">
+        <div class="modal-contents">
+          <div class="close">+</div>
+          <img class ="logo-image" src="img/logo.jpg" alt ="">
+          <form action="">
+            <input class="modal" id="photo" type="text" placeholder="Product Photo">
+            <input class="modal" id="name" type="text" placeholder="Product Name">
+            <input class="modal" id="category" type="text" placeholder="Product Category">
+            <input class="modal" id="price" type="text" placeholder="Product Price">
+            <br>
+            <a href="#" class="button-form" id="btnAdd">Add</a>
+          </form>
+        </div>
+      </div>
+
+      <table class="image-table">
+        <tbody>
+          <tr class="statistics">
+          <td>
+            <img class="image-first-row" 
+                onmouseover="applyBigImageStyling(this)" 
+                onmouseout="applyNormalImageStyling(this)" 
+                src="img/Pizza Salami.webp" 
+                alt="Pizza Salami" 
+                title="Pizza Salami">
+            <h5>Pizza Salami</h5>
+            <br>
+            <h5 class="category">Pizza</h5>
+            <br>
+            <h4>$15.00</h4>
+          </td>
+          <td>
+            <img class="image-first-row" 
+                onmouseover="applyBigImageStyling(this)" 
+                onmouseout="applyNormalImageStyling(this)" 
+                src="img/pizza with green leaves.webp" 
+                alt="Pizza with green leaves" 
+                title="pizza with green leaves">
+            <h5>Pizza with green leaves</h5>
+            <br>
+            <h5 class="category">Pizza</h5>
+            <br>
+            <h4>$10.00</h4>
+          </td>
+          <td>
+            <img class="image-first-row" 
+                onmouseover="applyBigImageStyling(this)" 
+                onmouseout="applyNormalImageStyling(this)" 
+                src="img/Carbonara pasta.webp" 
+                alt="Pasta Carbonara" 
+                title="Pasta Carbonara">
+            <h5>Pasta Carbonara</h5>
+            <br>
+            <h5 class="category">Pasta</h5>
+            <br>
+            <h4>$20.00</h4>
+          </td>
+          <td>
+            <img class="image-first-row" 
+                onmouseover="applyBigImageStyling(this)" 
+                onmouseout="applyNormalImageStyling(this)" 
+                src="img/Hamburger.webp" 
+                alt="Hamburger" 
+                title="Hamburger">
+            <h5>Hamburger</h5>
+            <br>
+            <h5 class="category">Hamburger</h5>
+            <br>
+            <h4>$18.50</h4>
+          </td>
+         </tr>
+         <tr class="statistics">
+            <td>
+                <img class="image-after-first-row" 
+                    onmouseover="applyBigImageStyling(this)" 
+                    onmouseout="applyNormalImageStyling(this)" 
+                    src="img/Rice noodle with eggs.webp" 
+                    alt="Rice Noodles with eggs" 
+                    title="Rice Noodles with eggs">
+                <h5>Rice Noodles with eggs</h5>
+                <br>
+                <h5 class="category">Noodles</h5>
+                <br>
+                <h4>$25.50</h4>
+               </td>
+              <td>
+                <img class="image-after-first-row" 
+                    onmouseover="applyBigImageStyling(this)" 
+                    onmouseout="applyNormalImageStyling(this)" 
+                    src="img/sunny side up egg with lettuce and bread.webp" 
+                    alt="Sunny side up egg with lettuce and bread" 
+                    title="Sunny side up egg with lettuce and bread">
+                <h5>Sunny side up eggs</h5>
+                <br>
+                <h5 class="category">Breakfast</h5>
+                <br>
+                <h4>$4.00</h4>
+              </td>
+            <td>
+                <img class="image-after-first-row" 
+                    onmouseover="applyBigImageStyling(this)" 
+                    onmouseout="applyNormalImageStyling(this)" 
+                    src="img/American pancakes with mapple syrop.webp" 
+                    alt="American pancakes with mapple syrop" 
+                    title="American pancakes with mapple syrop">
+                <h5>American pancakes</h5>
+                <br>
+                <h5 class="category">Sweets</h5>
+                <br>
+                <h4>$7.00</h4>
+            </td>
+            <td>
+                <img class="image-after-first-row" 
+                    onmouseover="applyBigImageStyling(this)" 
+                    onmouseout="applyNormalImageStyling(this)" 
+                    src="img/chocolate cake.webp" 
+                    alt="Chocolate Cake" 
+                    title="Chocolate Cake">
+                <h5>Chocolate Cake</h5>
+                <br>
+                <h5 class="category">Sweets</h5>
+                <br>
+                <h4>$13.50</h4>
+            </td>
+          </tr>
+        </tbody>
+       </table>
+
+      <script src="slider.js"></script>
+      <script src="imageHover.js"></script>
+      <script src="buttonAdd.js"></script>
+  </body>
+</html>
